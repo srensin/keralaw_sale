@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080c16">
+    <meta name="description" content="This domain is available for sale. Own it today for $300 or ₹27,000.">
+    <title>Domain For Sale</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            background: #080c16;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: rgba(45, 112, 255, 0.13);
+            filter: blur(150px);
+            top: -150px;
+            left: -100px;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            background: rgba(0, 210, 255, 0.08);
+            filter: blur(150px);
+            bottom: -150px;
+            right: -100px;
+            pointer-events: none;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 780px;
+            text-align: center;
+            padding: 70px 45px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+            animation: appear 1s ease forwards;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 17px;
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            border-radius: 100px;
+            background: rgba(59, 130, 246, 0.08);
+            color: #93c5fd;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #60a5fa;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #60a5fa;
+            animation: pulse 1.8s infinite;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 78px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            background: linear-gradient(120deg, #ffffff, #8bbcff, #4b91ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #9ca9bd;
+            line-height: 1.7;
+            max-width: 530px;
+            margin: 0 auto 42px;
+        }
+
+        .price-box {
+            padding: 30px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(96, 165, 250, 0.18);
+            background: linear-gradient(
+                145deg,
+                rgba(59, 130, 246, 0.09),
+                rgba(255, 255, 255, 0.02)
+            );
+            margin-bottom: 35px;
+        }
+
+        .price-label {
+            color: #8fa3be;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .usd {
+            font-size: clamp(48px, 9vw, 76px);
+            font-weight: 800;
+            letter-spacing: -3px;
+        }
+
+        .usd small {
+            font-size: 22px;
+            font-weight: 500;
+            color: #9caec8;
+            letter-spacing: 0;
+        }
+
+        .inr {
+            margin-top: 12px;
+            font-size: 23px;
+            font-weight: 600;
+            color: #93c5fd;
+        }
+
+        .divider {
+            width: 50px;
+            height: 1px;
+            background: rgba(96, 165, 250, 0.5);
+            margin: 25px auto;
+        }
+
+        .contact-label {
+            font-size: 13px;
+            color: #8493aa;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .email {
+            display: inline-block;
+            color: #ffffff;
+            font-size: clamp(15px, 3vw, 19px);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 25px;
+            transition: color 0.3s;
+        }
+
+        .email:hover {
+            color: #60a5fa;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 30px;
+            background: #3b82f6;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            background: #2563eb;
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.35);
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #536177;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 50px 22px;
+                border-radius: 22px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+            .price-box {
+                padding: 25px 15px;
+            }
+
+            .inr {
+                font-size: 20px;
+            }
+
+            .footer {
+                margin-top: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="card">
+
+            <div class="badge">
+                <span class="dot"></span>
+                Available for acquisition
+            </div>
+
+            <h1>
+                <span>Domain For Sale</span>
+            </h1>
+
+            <p class="subtitle">
+                A unique digital address is waiting for its next owner.
+                Secure this domain and build something extraordinary.
+            </p>
+
+            <div class="price-box">
+                <div class="price-label">Asking Price</div>
+
+                <div class="usd">
+                    $300 <small>USD</small>
+                </div>
+
+                <div class="inr">
+                    ₹27,000 INR
+                </div>
+            </div>
+
+            <div class="contact-label">
+                Interested in acquiring this domain?
+            </div>
+
+            <a class="email" href="mailto:srensinblibliquesit@gmail.com">
+                srensinblibliquesit@gmail.com
+            </a>
+
+            <br>
+
+            <a class="contact-btn"
+               href="mailto:srensinblibliquesit@gmail.com?subject=Domain%20Purchase%20Inquiry">
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="m3 7 9 6 9-6"></path>
+                </svg>
+                Contact Seller
+            </a>
+
+            <div class="footer">
+                © <span id="year"></span> · DOMAIN OWNERSHIP OPPORTUNITY
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Automatically update copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
